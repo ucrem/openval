@@ -2,7 +2,7 @@
 import {Bars3Icon, BellIcon} from "@heroicons/react/24/outline";
 import {ChevronDownIcon, MagnifyingGlassIcon} from "@heroicons/react/20/solid";
 import {Menu, Transition} from "@headlessui/react";
-import {Dispatch, Fragment, useState} from "react";
+import {Dispatch, Fragment} from "react";
 import classNames from "@/utils/globalFunctions";
 
 
@@ -16,9 +16,6 @@ const userNavigation = [
 ]
 
 export default function TopBar(props: TopBarProps){
-
-    const [openSidebar,setSidebarOpen] = useState(false);
-
 
     return(
         <>
@@ -38,7 +35,7 @@ export default function TopBar(props: TopBarProps){
                             Search
                         </label>
                         <MagnifyingGlassIcon
-                            className="pointer-events-none absolute inset-y-0 left-0 h-full w-5 text-gray-400"
+                            className="pointer-events-none absolute inset-y-0 left-3 h-full w-5 text-gray-400"
                             aria-hidden="true"
                         />
                         <input

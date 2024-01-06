@@ -4,10 +4,10 @@ import {
     Cog6ToothIcon,
     DocumentDuplicateIcon,
     FolderIcon,
-    HomeIcon,
+    HomeIcon, TrophyIcon, UserGroupIcon, UserIcon,
     UsersIcon, XMarkIcon
 } from "@heroicons/react/24/outline";
-import classNames from "@/utils/globalFunctions";
+import {classNames} from "@/utils/globalFunctions";
 import {Dispatch, Fragment} from "react";
 import {Dialog, Transition} from "@headlessui/react";
 import LogoDefault from "@/components/ui/logos/logoDefault";
@@ -18,21 +18,18 @@ export interface SidebarProps {
     sidebarOpenAction: Dispatch<boolean>
 }
 
-
-
 const navigation = [
-    { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
-    { name: 'Team', href: '#', icon: UsersIcon, current: false },
-    { name: 'Projects', href: '#', icon: FolderIcon, current: false },
-    { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
-    { name: 'Documents', href: '#', icon: DocumentDuplicateIcon, current: false },
-    { name: 'Reports', href: '#', icon: ChartPieIcon, current: false },
+    { name: 'Dashboard', href: '/', icon: HomeIcon, current: true },
+    { name: 'Players', href: '#', icon: UserIcon, current: false },
+    { name: 'Teams', href: '#', icon: UserGroupIcon, current: false },
+    { name: 'Events', href: '#', icon: CalendarIcon, current: false },
+    { name: 'Leaderboard', href: '#', icon: TrophyIcon, current: false },
 ]
 
 const teams = [
-    { id: 1, name: 'Heroicons', href: '#', initial: 'H', current: false },
-    { id: 2, name: 'Tailwind Labs', href: '#', initial: 'T', current: false },
-    { id: 3, name: 'Workcation', href: '#', initial: 'W', current: false },
+    { id: 1, name: 'OCGames', href: '#', initial: 'OCG', current: false },
+    { id: 2, name: 'TeamVal', href: '#', initial: 'TMV', current: false },
+    { id: 3, name: 'AnotherTeamVal', href: '#', initial: 'ATV', current: false },
 ]
 
 
