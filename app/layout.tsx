@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Sidebar from "@/components/layout/layoutMaster/sidebar";
 import TopBar from "@/components/layout/layoutMaster/topbar";
+import LayoutMain from "@/components/layout/layoutMaster/layoutMain";
 
 
 export const metadata: Metadata = {
@@ -18,13 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={'h-full bg-white'}>
         <body className={'h-full'}>
-            <Sidebar/>
-            <div className="lg:pl-72">
-                <TopBar/>
-                <main className="py-10">
-                    <div className="px-4 sm:px-6 lg:px-8">{children}</div>
-                </main>
-            </div>
+            <LayoutMain>{children}</LayoutMain>
         </body>
     </html>
 )
