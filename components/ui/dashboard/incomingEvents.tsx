@@ -43,15 +43,10 @@ const projects = [
     },
 ]
 
-
-
 export default function IncomingEvents(){
-    const data= convertDates('2023-12-07T00:00Z');
-    console.log("Data convertita; ",data)
 
     return(
         <>
-
             <div className="w-3/6 border border-gray-200 bg-white px-4 py-5 sm:px-6 shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl mt-3">
                 <h3 className="border-b border-gray-200 text-base font-semibold leading-6 text-gray-900 pb-3">Incoming Events</h3>
                 <ul role="list"
